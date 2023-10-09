@@ -1,4 +1,4 @@
- public class DiagonalSum {
+public class DiagonalSum {
 	
 	public static int Dia(int [][] m) {
 		int sum=0;
@@ -11,10 +11,10 @@
 		if(L%2 !=0)
 		{
 		sum=sum-m[L/2][L/2];
-		return sum;
 		
 		}
-	
+	      return sum;
+		
 		
 		
 	}
