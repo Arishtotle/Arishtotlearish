@@ -101,6 +101,9 @@ public Motel(int floorNumber,int roomNumber,int roomType,int roomBed){
    this.roomBed=roomBed;
    this.available=true;
 }
+
+public Motel(){
+}
 for(int i=1;i<4;i++){
 for(int j=1;j<4;j++){
 rooms.add(new Motel(i,j,0,0));
@@ -144,10 +147,17 @@ String number=sc.next();
    
    if(floor==m.floorNumber && room==m.roomNumber && ac==m.roomType && bed==m.roomBed && m.available==true){
    m.avaialble=false;
-   localtime=t
-   
-   
-   
+   LocalDateTime d = LocalDateTime.now();
+   try{
+      FileWriter writer=new FileWriter("Bookingdb.txt");
+       FileWriter writer1=new FileWriter("Roomdb.txt");
+      writer.write(floor+" "+room+" "+ac+" "+bed+" "+d+" "+str[0]+" "+str[1]+" "+str[2]+" "+str[3]);
+      writer1.write(floor+" "+room+" "+ac+" "+bed+" "+d+" "+str[0]+" "+str[1]+" "+str[2]+" "+str[3]);
+      writer.close();
+      writer1.close();
+   }catch(Exception e){
+   System.out.println(e);
+   }
    }else{
    System.out.println("the room you selected is already occupied");
    displayRooms(rooms);
@@ -157,6 +167,84 @@ String number=sc.next();
    System.out.println("please enter the correct aadhar number ");
    }
    }
+   scan.close();
+   }catch(Exception ex){
+   System.out.println(ex);
+   }
+   }
+   
+public static void changeRoom(List<Motel> rooms){
+   System.out.println("enter your Aadhar Number ");
+String number=sc.next();
+  String[] str;
+    String s="";
+    try{
+    File file=new File("Credentials.txt");
+   Scanner scan=new Scanner(file);
+   while(scan.hasNextLine()){
+   s=scan.nextLine();
+   str=s.split(" ");
+   if(number.equals(str[0]){
+   String[] str1;
+    String s1="";
+    try{
+    File file1=new File("Bookingdb.txt");
+   Scanner scan=new Scanner(file1);
+   while(scan.hasNextLine()){
+   s=scan.nextLine();
+   str=s.split(" ");
+   
+   System.out.println("please enter the room number ");
+   int room1=sc.nextInt();
+     for(Motel m1:rooms){
+   
+   if(room1==str1[1] && m1.available==false){
+   m1.avaialble=true;
+   }
+   }scan.close();
+   }catch(Exception io){
+   System.out.println(io);
+   }
+   System.out.println("please enter the floor number ");
+   int floor=sc.nextInt();
+   System.out.println("please enter the room number ");
+   int room=sc.nextInt();
+   System.out.println("please enter the Room type Ac/Non-Ac   (0/1)");
+   int ac=sc.nextInt();
+   System.out.println("please enter the room type 2BED/3BED   (0/1)");
+   int bed=sc.nextInt();
+   int pay=100;
+   for(Motel m:rooms){
+   
+   if(floor==m.floorNumber && room==m.roomNumber && ac==m.roomType && bed==m.roomBed && m.available==true){
+   m.avaialble=false;
+   LocalDateTime d = LocalDateTime.now();
+   try{
+      FileWriter writer=new FileWriter("ChangeBookingdb.txt");
+       FileWriter writer1=new FileWriter("Roomdb.txt");
+      writer.write(floor+" "+room+" "+ac+" "+bed+" "+d+" "+str[0]+" "+str[1]+" "+str[2]+" "+str[3]+" "+pay);
+      writer1.write(floor+" "+room+" "+ac+" "+bed+" "+d+" "+str[0]+" "+str[1]+" "+str[2]+" "+str[3]+" "+pay);
+      writer.close();
+      writer1.close();
+   }catch(Exception e){
+   System.out.println(e);
+   }
+   }else{
+   System.out.println("the room you selected is already occupied");
+   displayRooms(rooms);
+   }
+   }
+   }else{
+   System.out.println("please enter the correct aadhar number ");
+   }
+   }
+   scan.close();
+   }catch(Exception ex){
+   System.out.println(ex);
+   }
+   }
+
+   
 }
 
 
@@ -165,7 +253,7 @@ public class Motel_Reservation_System{
 public static void main(String[] args){
 
 User user=new User();
-
+Motel motel=new Motel();
 Scanner sc=new Scanner(System.in);
 boolean b=false;
 while (!b){
@@ -183,10 +271,10 @@ System.out.println("1.Book room "+"\n2.Change Room "+"\n3.Leave the Room "+"\n4.
 int i=sc.nextInt();
 switch(i){
     case 1:
-    
+    motel.bookRoom(Motel.rooms);
     break;
     case 2:
-    
+    motel.changeRoom(Motel.rooms);
     break;
     case 3:
     
