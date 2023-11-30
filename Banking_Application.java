@@ -290,7 +290,7 @@ case 0:
 a=true;
 break;
 default:
-System.out.println("please enter the correct opton to continue");
+System.out.println("please enter the correct option to continue");
 break;
 }
 }
@@ -305,10 +305,10 @@ case 3:
 break;
 
 case 4:
-//bank.changePassword(User.users);
+bank.changePassword(User.users);
 break;
 case 5:
-//bank.passwordHistory();
+bank.passwordHistory();
 break;
 
 case 0:
