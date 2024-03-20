@@ -1,0 +1,20 @@
+.chessboard{
+	border:5px solid #000;
+	width:fit-content;
+	margin:auto;
+}
+.square{
+	width:100px;
+	height:100px;
+	display:inline-block;
+	margin-bottom:-4px;
+}
+.white{
+	background-color:#fff;
+}
+.black{
+	background-color:#000;
+}
+.parent{
+	display:block;
+}

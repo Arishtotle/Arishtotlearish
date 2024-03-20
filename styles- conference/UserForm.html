@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>User Table</title>
+    <meta charset="UTF-8" />
+    <link rel="stylesheet" href="CSS_FOLDER\UserForm.css" />
+  </head>
+
+  <body>
+    <div class="outbox">
+      <form class="formbox" onsubmit="return submitData()">
+        <div class="labelclass">
+          <label class="content" for="fname"><b>First Name </b></label>
+          <input
+            type="text"
+            id="fname"
+            name="fname"
+            onclick="firstNameErrorHide()"
+            required
+            autofocus
+          />
+          <div id="fnameError"></div>
+        </div>
+        <div class="labelclass">
+          <label class="content" for="lname"><b>Last Name </b></label>
+          <input
+            type="text"
+            id="lname"
+            name="lname"
+            onclick="firstName()"
+            required
+          />
+        </div>
+        <div class="labelclass">
+          <label class="content" for="gender"><b>Gender </b></label>
+          <select class="optionclass" id="gender" required>
+            <option value="" selected="Select">Select</option>
+            <option value="Male">Male</option>
+            <option value="Female">Female</option>
+            <option value="Others">Others</option>
+          </select>
+        </div>
+        <div class="labelclass">
+          <label class="content" for="phone"><b>Phone</b></label>
+          <input
+            type="tel"
+            id="phone"
+            name="phone"
+            pattern="[0-9]{10}"
+            title="Please enter a 10-digit mobile number"
+			required
+          />
+        </div>
+        <div class="labelclass">
+          <label class="content" for="Email"><b>Email </b></label>
+          <input
+            type="email"
+            id="Email"
+            name="Email"
+            title="enter the valid mail id"
+            required
+          />
+        </div>
+        <input type="submit" class="buttonclass" value="submit" >
+      </form>
+    </div>
+    <div class="filterset">
+      <label class="filter" for="genderFilter"><b>Gender filter : </b></label>
+      <select class="filter1" id="genderFilter" onchange="filterGender()">
+        <option value="All" autofocus>All</option>
+        <option value="Male">Male</option>
+        <option value="Female">Female</option>
+        <option value="Others">Others</option>
+      </select>
+      <table id="userData" class="All">
+        <thead>
+          <tr>
+            <th>First-name</th>
+            <th>Last-name</th>
+            <th>Gender</th>
+            <th>Phone</th>
+            <th>Email</th>
+          </tr>
+        </thead>
+        <tbody id="tbodyData"></tbody>
+      </table>
+    </div>
+    <script src="JS_FOLDER\UserForm.js"></script>
+  </body>
+</html>

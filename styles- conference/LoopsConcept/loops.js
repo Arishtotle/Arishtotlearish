@@ -1,0 +1,119 @@
+function halfPyramid(){
+	console.log('\n'+"Half Pyramid");
+	for(i=1;i<=5;i++){
+		var s="";
+		for(j=1;j<=i;j++){
+			s+=j+" ";	
+		}
+		
+		console.log(s);
+	}
+}
+halfPyramid();
+
+function halfPyramid1(){
+	console.log('\n'+"Half Pyramid 1");
+	var count=1;
+	for(i=1;i<=5;i++){
+		var s="";
+		for(j=1;j<=i;j++){
+			s+=count +" ";	
+			count++;
+		}
+		console.log(s);
+	}
+}// Extra variable used to make ordered sequence of number in continuous format...
+halfPyramid1();
+
+function halfPyramid2(){
+	console.log('\n'+"Half Pyramid 2");
+	for(i=1;i<=5;i++){
+		var s="";
+		for(j=1;j<=i;j++){
+			s+=(i-1)*i/2+j +" ";	
+		}
+		console.log(s);
+	}
+}//without using Extra variable making continuous count of number to print in the pattern
+halfPyramid2();
+
+function invertedHalfPyramid(){
+	console.log('\n'+"Inverted Half Pyramid");
+	for(i=0;i<5;i++){
+		var s="";
+		for(j=1;j<=5-i;j++){
+			s+=j+" ";
+		}
+		console.log(s);
+	}
+}
+invertedHalfPyramid();
+
+function hollowHalfPyramid(){
+	console.log('\n'+"Hollow Half Pyramid");
+	for(i=1;i<=5;i++){
+		var s="";
+		for(j=1;j<=i;j++){
+			if(j==1 || j==i || i==5){
+				s+=j+" ";
+			}else{
+				s+="  ";
+			}
+		}
+		console.log(s);
+	}
+}
+hollowHalfPyramid();
+
+function hollowInvertedHalfPyramid(){
+	console.log('\n'+"Hollow Inverted Half Pyramid");
+	for(i=1;i<=5;i++){
+		var s="";
+		for(j=i;j<=5;j++){
+			if(i==1 || j==i ||j==5){
+				s+=j+" ";
+			}else{
+				s+="  ";
+			}
+		}
+		console.log(s);
+	}
+}
+hollowInvertedHalfPyramid();
+
+function hollowFullPyramid(){
+	console.log('\n'+"Hollow Full Pyramid");
+	for(i=1;i<=5;i++){
+		var s="";
+		for(j=1;j<=5-i;j++){
+			s+=" ";
+		}
+		for(j=1;j<=i;j++){
+			if(j==1 || j==i || i==5){
+				s+=j+" ";
+			}else{
+				s+="  ";
+			}
+		}
+		console.log(s);
+	}
+}
+hollowFullPyramid();
+
+function fullPyramid(){
+	console.log('\n'+"Full Pyramid");
+	for(i=1;i<=6;i++){
+		var s="";
+		for(j=1;j<=(6-i)*2;j++){
+			s+=" ";
+		}
+		for(j=i;j<i*2;j++){
+			s+=j+" ";
+		}
+		for(j=i*2-2;j>=i;j--){
+			s+=j+" ";
+		}
+		console.log(s);
+	}
+}
+fullPyramid();

@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>College Addmission</title>
+    <meta charset="UTF-8" />
+    <link rel="stylesheet" href="EvaluationTask3.css" />
+  </head>
+
+  <body>
+    <div class="left">
+      <div class="RegistraionForm" onclick="openRegisterForm()">Registraion Form</div>
+      <div class="AdmissionForm" onclick="openAdmissionForm()">Admission Form</div>
+      <div class="DataTable" onclick="openDataTable()">Data Table</div>
+    </div>
+    <div class="right">
+      <form class="registerForm" onsubmit="registerForm()">
+        <div class="RFDiv">
+          <label class="form1" for="Name"><b>Name</b></label>
+          <input id="Name" name="Nmae" autofocus required />
+        </div>
+        <div class="RFDiv">
+          <label class="form1" for="Email"><b>Email</b></label>
+          <input type="email" id="Email" name="Email" required />
+        </div>
+        <div class="RFDiv">
+          <label class="form1" for="Gender"><b>Gender</b></label>
+          <select id="Gender" onchange="checkGender()" required>
+            <option value="">Select</option>
+            <option value="Male">Male</option>
+            <option value="Female">Female</option>
+          </select>
+        </div>
+        <div class="RFDiv">
+          <label class="form1" for="Stream"><b>Stream</b></label>
+          <select id="Stream" required >
+            <option value="">Select</option>
+            <option value="C.S">C.S</option>
+            <option value="Biology">Biology</option>
+          </select>
+        </div>
+        <div class="RFDiv">
+          <label class="form1" for="Phone"><b>Phone</b></label>
+          <input
+            type="tel"
+            id="Phone"
+            pattern="[0-9]{10}"
+            name="Phone"
+            required
+          />
+        </div>
+        <input type="submit" id="submitButton" value="submit" />
+      </form>
+  
+		<form class="admissionForm" onsubmit="admissionForm()">
+			<div class="RFDiv">
+				<label class="form1" for="AName"><b>Name</b></label>
+				<input id="AName" name="ANmae" required />
+			</div>
+			<div class="check" onclick="checkRegistration()">Check</div>
+			<div class="RFDiv">
+				<label class="form1" for="AEmail"><b>Email</b></label>
+				<input type="email" id="AEmail" name="AEmail" required />
+			</div>
+			<div class="RFDiv">
+				<label class="form1" for="Gender"><b>Gender</b></label>
+				<input type="text" id="AGender" name="AGender" required />
+			</div>
+			<div class="RFDiv">
+				<label class="form1" for="Department"><b>Department</b></label>
+				<select id="Department" required >
+					<option value="">Select</option>
+					<option value="I.T">I.T</option>
+					<option value="CSC">CSC</option>
+					<option value="Bio.Tech">Bio.Tech</option>
+					<option value="Bio.Chemical">Bio.Chemical</option>
+				</select>
+			</div>
+			
+			<input type="submit" id="submitButton" value="submit" />
+		</form>
+
+	<div class="dataTable">
+		<div class="filter">
+		<label class="form1" for="genderFilter"><b>Gender</b></label>
+          <select id="genderFilter" onchange="filterData()" required>
+            <option value="All">All</option>
+            <option value="Male">Male</option>
+            <option value="Female">Female</option>
+          </select>
+		<label class="form1" for="DepartmentFilter"><b>Department</b></label>
+				<select id="DepartmentFilter" onchange="filterData()" required >
+					<option value="All">All</option>
+					<option value="I.T">I.T</option>
+					<option value="CSC">CSC</option>
+					<option value="Bio.Tech">Bio.Tech</option>
+					<option value="Bio.Chemical">Bio.Chemical</option>
+				</select>
+		</div>
+		
+		<table id="userData" class="tableData">
+			<thead>
+				<tr>
+					<th>Name</th>
+					<th>Email</th>
+					<th>Gender</th>
+					<th>Department</th>
+				</tr>
+			</thead>
+			<tbody id="tbodyData"></tbody>
+		</table>
+		
+	</div>
+	</div>
+    <script src="EvaluationTask3.js"></script>
+  </body>
+</html>

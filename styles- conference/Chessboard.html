@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+	<html>
+	
+		<head>
+				<title>Chess Board</title>	
+				<meta charset="UTF-8">
+				 <link rel="stylesheet" href="CSS_FOLDER\Chessboard.css" />
+				
+		</head>
+		
+		<body>
+				<h2>Enter the Size the board to be in:</h2>
+				<input type="number" id="n"><br>
+				<button onclick="chessboard()"> Submit</button>
+				
+				<div class="chessboard" id="chessboard"> </div>
+				
+				<script >
+					function chessboard(){
+						var inputvalue=document.getElementById("n").value;
+						var chessboard=document.getElementById("chessboard");
+							chessboard.innerHTML="";
+						for(i=0;i<inputvalue;i++){
+			
+							var output=document.createElement("div");
+								output.classList.add("parent");
+				
+							for(j=0;j<inputvalue;j++){
+				
+								var addHere=document.createElement("div");
+									addHere.classList.add("square");
+					
+								if((i+j)%2===0){
+									addHere.classList.add("white");
+								}else{
+									addHere.classList.add("black");	
+								}
+				
+								output.appendChild(addHere);
+							}
+							chessboard.appendChild(output);
+						}
+					}
+				</script>
+		</body>
+	</html>

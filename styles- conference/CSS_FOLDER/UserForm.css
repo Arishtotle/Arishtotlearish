@@ -1,0 +1,64 @@
+.formbox{
+	border:2px groove #000;
+	background-color:#E7E7E7;
+	width:500px;
+	margin:auto;
+}
+.formbox{
+	margin-top:190px;
+	padding-top:10px;
+}
+.content{
+	font-size:25px;
+	text-align:left;
+	display:inline-block;
+	width:200px;
+}
+.outbox {
+	text-align:center;
+}
+.buttonclass{
+	font-size:25px;
+	margin:20px 20px 20px 15px;
+	padding:5px 35px ;
+}
+.optionclass{
+	width:170px;
+}
+
+.filter,.filter1{
+	margin:20px 0;
+	
+}
+.filterset{
+	font-size:21px;
+	text-align:center;
+	margin:auto;
+	width:fit-content;
+}
+.filterset{
+	border:2px solid #000;
+	background-color:#E7E7E7;
+	padding:6px;
+	margin-top:20px;
+	display:none;
+}
+table,th,td{
+	border:2px solid #000;
+	border-collapse: collapse;
+	padding:10px;
+}
+body{
+	text-align:center;
+	background-color:#D6EDEF;
+}
+#fnameError{
+	margin-left:153px;
+	color:#f00;
+	font-size:13px;
+}
+.labelclass{
+	margin:10px;
+	font-size:20px;
+}
+	

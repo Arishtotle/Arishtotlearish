@@ -1,0 +1,59 @@
+.outbox{
+	background-color:orange;
+	position:relative;
+	height:100vh;
+}
+.scrolling{
+	margin:0 100px;
+	background-color:yellowgreen;
+	position:relative;
+}
+.divpic{
+	width: fit-content;
+	padding-top:50px;
+	margin-left:auto;
+	margin-right:110px;
+}
+img{
+	width:250px;
+	height:250px;
+}
+.divtext 	{
+	padding-top:50px;
+	font-size:4.5vw;
+	text-align: center;
+	color:white;
+	width:auto;
+	white-space:nowrap;
+}
+.subcontent{
+	padding-bottom:112px;
+	font-size: 16px;
+}
+.headtext{
+    border:2px;
+	font-size:25px;
+	position: sticky;
+	top:0;
+	text-align: center;
+}
+.mtbox{
+	border:2px;
+	padding:25px;
+	text-align:center;
+}
+.img1{
+	height:150px;
+	width:150px;
+	position:absolute;
+	bottom:0;
+	right:0;
+	margin:10px 10px 0 10px;	
+}
+.img2{
+	position:absolute;
+	height:100px;
+	width:100px;
+	bottom:0;
+	right:0;
+}

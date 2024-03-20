@@ -1,0 +1,53 @@
+#BaseForm{
+	margin:auto;
+	border:2px groove #000;
+	padding:20px;
+	width:450px;
+	text-align:center;
+}
+.BaseOne label{
+	width:200px;
+	display:inline-block;
+	text-align:left;
+}
+.BaseOne {
+	padding:10px;
+	margin:10px;
+}
+#MobileType,#SimType,#SimValue,#SmartType{
+	width:170px;
+}
+#Submit{
+	font-size:20px;
+	background-color:#E3F0F0;
+	padding:5px 10px;
+	margin-top:15px;
+}
+#SmartTypes,#SimTwos{
+	display:none;
+}
+
+#BaseTwo,#CallFun,#MessageFun,#EmailFun,#FacetimeFun,#DuoFun,#SkypeFun,#output{
+	margin:auto;
+	border:2px groove #000;
+	padding:20px;
+	width:450px;
+	text-align:center;
+}
+
+#call,#message,#email,#faceTime,#duo,#skype{
+	border:1px solid #000;
+	padding:15px;
+	margin:15px 80px;
+	width:250px;
+}
+
+#BaseTwo,#call,#message,#email,#faceTime,#duo,#skype,#facetimeids,#duoids,#skypeids,#fromEmails{
+	display:none;
+}
+#CallFun,#MessageFun,#EmailFun,#FacetimeFun,#DuoFun,#SkypeFun{
+	display:none;
+}
+#output{
+	display:none;
+}

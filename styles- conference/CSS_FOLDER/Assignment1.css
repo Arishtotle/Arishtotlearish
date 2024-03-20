@@ -1,0 +1,39 @@
+.outbox{
+	border-left:100px solid orange;
+	border-right:100px solid orange;
+	background-color:yellowgreen;
+	margin: 0;
+}
+.divpic{
+	margin-bottom: 50px;
+	width: fit-content;
+	margin: auto;
+}
+.divpic img{
+	margin: 0 60px
+}
+
+.divtext 	{
+	padding-top:50px;
+	font-size:65px;
+	text-align: center;
+	color:white;
+}
+.subcontent{
+	padding-bottom:120px;
+	font-size: 16px;
+}
+.headtext{
+    border:2px;
+	font-size:25px;
+	position: sticky;
+	top:0;
+	text-align: center;
+	padding-top: 75px;
+	padding-bottom: 50px;
+}
+
+img{
+	width: 250px;
+	height: 250px;;
+}

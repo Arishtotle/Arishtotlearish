@@ -1,0 +1,155 @@
+<! DOCTYPE html>
+	<html>
+
+	<head>
+		<title>Mobile Phone</title>
+		<meta charset="UTF-8" />
+		<link rel="stylesheet" href="EvaluationTask4.css" />
+	</head>
+
+	<body>
+		<div id="BaseForm">
+			<form onsubmit="BaseFormSubmit()">
+				<div class="BaseOne">
+					<label for="MobileType">Mobile Type : </label>
+					<select onchange="displaySmart()" id="MobileType" required>
+						<option value="">select</option>
+						<option value="Basic-Mobile">Basic-Mobile</option>
+						<option value="Smart-Phone">Smart-Phone</option>
+					</select>
+				</div>
+				<div class="BaseOne">
+					<label for="SimType">Sim Type : </label>
+					<select onchange="displaySimTow()" id="SimType" required>
+						<option value="">select</option>
+						<option value="Single">Single</option>
+						<option value="Dual">Dual</option>
+					</select>
+				</div>
+				<div class="BaseOne" id="SmartTypes">
+					<label for="SmartType">Smart Phone : </label>
+					<select onchange="DisplaySmartType()" id="SmartType">
+						<option value="">select</option>
+						<option value="IOS">IOS</option>
+						<option value="Android">Android</option>
+						<option value="Windows">Windows</option>
+					</select>
+				</div>
+				<div class="BaseOne">
+					<label for="SimOne">Sim One Number : </label>
+					<input type="tel" id="SimOne" name="SimTwo" required />
+				</div>
+				<div class="BaseOne" id="SimTwos">
+					<label for="SimTwo"> Sim Two Number : </label>
+					<input type="tel" id="SimTwo" name="SimTwo" />
+				</div>
+				<div class="BaseOne" id="fromEmails">
+					<label for="fromEmail">Email : </label>
+					<input type="mail" id="fromEmail" name="fromEmail">
+				</div>
+				<div class="BaseOne" id="facetimeids"
+				>
+					<label for="facetimeid">FaceTime : </label>
+					<input id="facetimeid" name="facetimeid">
+				</div>
+				<div class="BaseOne" id="duoids">
+					<label for="duoid">Duo : </label>
+					<input  id="duoid" name="duoid">
+				</div>
+				<div class="BaseOne" id="skypeids">
+					<label for="skypeid">Skype : </label>
+					<input  id="skypeid" name="skypeid">
+				</div>
+				
+				<input type="submit" value="submit" id="Submit" /+>
+			</form>
+		</div>
+		<div id="BaseTwo" class="BaseTwo">
+			<div id="call" onclick="call()">
+				Call
+			</div>
+			<div id="message" onclick="message()">
+				Message
+			</div>
+			<div id="email" onclick="email()">
+				Email
+			</div>
+			<div id="faceTime" onclick="facetime()">
+				Face Time
+			</div>
+			<div id="Duo" onclick="duo()">
+				Google Duo
+			</div>
+			<div id="skype" onclick="skype()">
+				Skype
+			</div>
+		</div>
+		
+		<div id="CallFun">
+			<label for="Tocall">To Call : </label>
+			<input id="Tocall" name="Tocall">
+			<input type="Submit" value="submit" id="Submit" onclick="callFunction()">
+		</div>
+		
+		
+		<div id="MessageFun">
+			<div>
+				<label for="Tomessage">To Message : </label>
+				<input id="Tomessage" name="Tomessage">
+			</div>
+			<div>
+				<label for="ToContent">To Content : </label>
+				<input id="ToContent" name="ToContent">
+			</div>
+			<input type="Submit" value="submit" id="Submit" onclick="messageFunction()">
+		</div>
+		
+		
+		<div id="EmailFun">
+			<div>
+				<label for="toEmail">To Email : </label>
+				<input type="mail" id="toEmail" name="toEmail">
+			</div>
+			<div>
+				<label for="subject">Subject : </label>
+				<input id="subject" name="subject">
+			</div>
+			<div>
+				<label for="ContentEmail">Content : </label>
+				<input id="ContentEmail" name="ContentEmail">
+			</div>
+			<input type="Submit" value="submit" id="Submit" onclick="emailFunction()">
+		</div>
+		
+		
+		<div id="FacetimeFun">
+			<div>
+				<label for="toFaceTime">To FaceTime : </label>
+				<input id="toFaceTime" name="toFaceTime">
+			</div>
+			<input type="Submit" value="submit" id="Submit" onclick="facetimeFunction()">
+		</div>
+		<div id="DuoFun">
+			
+			<div>
+				<label for="toDuo">To Duo : </label>
+				<input id="toDuo" name="toDuo">
+			</div>
+			<input type="Submit" value="submit" id="Submit" onclick="duoFunction()">
+		</div>
+		<div id="SkypeFun">
+			<div>
+			
+				<label for="toSkype">To Skype : </label>
+				<input id="toSkype" name="toSkype">
+			</div>
+			<input type="Submit" value="submit" id="Submit" onclick="instance.skype()">
+		</div>
+		
+		<div id="output">
+		</div>
+		
+		   <script src="EvaluationTask4.js"></script>
+	</body>
+
+	</html>

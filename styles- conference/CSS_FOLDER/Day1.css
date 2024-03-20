@@ -1,0 +1,43 @@
+#h1c{
+	color:black;
+	background-color:skyBlue;
+	border:4px black;
+}
+
+#ButtonID1{
+	color:black;
+	background-color:red;
+}
+
+.divid1:hover{
+	background-color:skyblue;
+}
+
+#h1c{
+	color:red;
+	background-color:green;
+	border:4px black;
+}
+.image12{
+	position:relative;
+}
+.image{
+	background-image:url("3840x2160-Images-Free-Download.jpg");
+}
+.h2class{
+	border:5px;
+	background-color:powderblue;
+	position:sticky;
+	top:0;
+}
+table,th,td{
+	border:1px solid black;
+	margin:3px;
+	background-color:powderblue;
+	padding:5px;
+	font-weight:center;
+}
+.divbox{
+	border:5px blue;
+	background-color:yellow;
+}
